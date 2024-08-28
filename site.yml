@@ -1,9 +1,9 @@
 # tag::site[]
 site:
-  title: ASAM PLACEHOLDER # Replace this with the actual name! This is how the overall Antora instance will be named.
+  title: ASAM OpenMATERIAL # This is how the overall Antora instance will be named.
   # the 404 page and sitemap files only get generated when the url property is set
-  url: "https://publications.pages.asam.net/standards/ASAM_PLACEHOLDER"
-  start_page: ASAM_PLACEHOLDER::index.adoc
+  url: https://asam-ev.github.io/openmaterial-antora-generator/asamopenmaterial/latest/specification/ 
+  start_page: asamopenmaterial:specification:index.adoc 
 # end::site[]
 urls: # Creates a redirect for the newest version to the link "latest"
   latest_version_segment_strategy: redirect:to
@@ -12,7 +12,7 @@ urls: # Creates a redirect for the newest version to the link "latest"
 # tag::content[]
 content:
   sources:
-    - url: https://code.asam.net/common/templates/standard-template.git # <1>
+    - url: https://github.com/asam-ev/OpenMATERIAL.git  # <1>
       branches: [main, v*.*.*]
       tags: [v*,V*]
       start_path: .antora
@@ -30,7 +30,7 @@ ui:
 
 output:
   clean: true
-  dir: ./public
+  dir: ./site 
 
 runtime:
   fetch: true
@@ -52,9 +52,8 @@ asciidoc:
     xrefstyle: short@
     listing-caption: Code
     page-width-limit: none@
-    THIS_STANDARD: ASAM PLACEHOLDER
-
-
+    THIS_STANDARD: ASAM OpenMATERIAL
+    
 # end::attributes[]
 
   extensions:
@@ -70,5 +69,6 @@ antora:
       section_number_style: 'iso'
       alternate_xref_style: 'full'
       loft: true
-      local_to_global_references: true
-      bibliography: true
+      local_to_global_references: false # Orignal value: true
+      bibliography: false # Original value: true; deactivated because build failed 
+   
