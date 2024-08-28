@@ -75,7 +75,7 @@ jobs:
       uses: docker://ghcr.io/asam-ev/project-guide-docker:4
       with:
         entrypoint: sh
-        args: repo/run-build-osi.sh # modfied based on OSI
+        args: repo/run-build.sh # modfied based on OSI
     
     - name: Upload pages artifact
       uses: actions/upload-pages-artifact@v3
