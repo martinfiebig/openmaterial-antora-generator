@@ -69,5 +69,5 @@ antora:
       section_number_style: 'iso'
       alternate_xref_style: 'full'
       loft: true
-      local_to_global_references: true
-      bibliography: true
+      local_to_global_references: false
+      bibliography: false
