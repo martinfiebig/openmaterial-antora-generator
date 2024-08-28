@@ -3,7 +3,7 @@ site:
   title: Test Martin # Replace this with the actual name! This is how the overall Antora instance will be named.
   # the 404 page and sitemap files only get generated when the url property is set
   url: "https://martinfiebig.github.io/openmaterial-antora-generator/asamopenmaterial/latest/specification/"
-  start_page: asamopenmaterial:specification:nav_openmaterial.adoc
+  start_page: asamopenmaterial:specification:index.adoc
 # end::site[]
 urls: # Creates a redirect for the newest version to the link "latest"
   latest_version_segment_strategy: redirect:to
