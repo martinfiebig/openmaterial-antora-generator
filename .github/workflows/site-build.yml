@@ -47,7 +47,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: asam-ev/OpenMATERIAL
-        path: repo/OpenMATERIAL #osi-documentation
+        path: repo/OpenMATERIAL 
         fetch-depth: 0 # test if depth in fetch history is required
                 
     - name: Apply dispatch information
