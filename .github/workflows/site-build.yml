@@ -1,4 +1,5 @@
 name: ASAM OpenMATERIAL build
+# Based on https://github.com/OpenSimulationInterface/osi-antora-generator/blob/main/.github/workflows/site-build.yml
 
 on:
   push: # on push
