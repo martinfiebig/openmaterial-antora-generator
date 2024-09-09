@@ -1,9 +1,9 @@
 # tag::site[]
 site:
-  title: Test Martin # Replace this with the actual name! This is how the overall Antora instance will be named.
+  title: ASAM OpenMATERIAL # This is how the overall Antora instance will be named.
   # the 404 page and sitemap files only get generated when the url property is set
-  url: "https://martinfiebig.github.io/openmaterial-antora-generator/asamopenmaterial/latest/specification/"
-  start_page: asamopenmaterial:specification:index.adoc
+  url: https://asam-ev.github.io/openmaterial-antora-generator/asamopenmaterial/latest/specification/ 
+  start_page: asamopenmaterial:specification:index.adoc 
 # end::site[]
 urls: # Creates a redirect for the newest version to the link "latest"
   latest_version_segment_strategy: redirect:to
@@ -12,11 +12,12 @@ urls: # Creates a redirect for the newest version to the link "latest"
 # tag::content[]
 content:
   sources:
-    - url: https://github.com/martinfiebig/OpenMATERIAL.git
+    - url: https://github.com/asam-ev/OpenMATERIAL.git  # <1>
       branches: [main, v*.*.*]
       tags: [v*,V*]
       start_path: .antora
-    - url: https://code.asam.net/common/asam-terminology.git
+    # edit_url: 'https://code.asam.net/internal/examples/antora-content-base-structure/-/blob/{refname}/{path}'
+    - url: https://code.asam.net/common/asam-terminology.git # <2>
       start_path: .antora
       tags: [v*,V*]
 # end::content[]
@@ -29,7 +30,7 @@ ui:
 
 output:
   clean: true
-  dir: ./site
+  dir: ./site 
 
 runtime:
   fetch: true
@@ -51,9 +52,8 @@ asciidoc:
     xrefstyle: short@
     listing-caption: Code
     page-width-limit: none@
-    THIS_STANDARD: ASAM PLACEHOLDER
-
-
+    THIS_STANDARD: ASAM OpenMATERIAL
+    
 # end::attributes[]
 
   extensions:
@@ -69,5 +69,6 @@ antora:
       section_number_style: 'iso'
       alternate_xref_style: 'full'
       loft: true
-      local_to_global_references: false
-      bibliography: false
+      local_to_global_references: false # Orignal value: true
+      bibliography: false # Original value: true; deactivated because build failed 
+   
