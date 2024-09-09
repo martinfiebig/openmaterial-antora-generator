@@ -29,7 +29,7 @@ ui:
 
 output:
   clean: true
-  dir: ./site
+  dir: ./site 
 
 runtime:
   fetch: true
