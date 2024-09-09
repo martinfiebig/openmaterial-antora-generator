@@ -69,6 +69,6 @@ antora:
       section_number_style: 'iso'
       alternate_xref_style: 'full'
       loft: true
-      local_to_global_references: false # Orignal value: true
-      bibliography: false # Original value: true; deactivated because build failed 
+      local_to_global_references: false
+      bibliography: false
    
